@@ -1,0 +1,85 @@
+body {
+    background-color: #000; /* Hitam */
+    color: #fff; /* Putih untuk teks */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+header {
+    background-color: #ff0000; /* Merah */
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    margin: 20px 0;
+}
+
+p {
+    font-size: 1.2em;
+    color: fff; /* Biru */
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Jarak antara gambar */
+    margin: 20px 0;
+}
+
+.monthversary-image {
+    max-width: 23%; /* Ukuran maksimal setiap gambar, disesuaikan untuk 4 gambar */
+    height: auto;
+    border: 5px solid #00f; /* Bingkai biru untuk gambar */
+    border-radius: 10px;
+    animation: zoomIn 0.5s ease; /* Menambahkan animasi zoom-in */
+    opacity: 0; /* Awalnya gambar tidak terlihat */
+    animation-fill-mode: forwards; /* Mempertahankan gaya akhir dari animasi */
+}
+
+/* Efek animasi zoom-in */
+@keyframes zoomIn {
+    from {
+        transform: scale(0.5); /* Mulai dari ukuran setengah */
+        opacity: 0; /* Tidak terlihat */
+    }
+    to {
+        transform: scale(1); /* Ukuran normal */
+        opacity: 1; /* Menjadi terlihat */
+    }
+}
+
+/* Untuk memberikan delay pada setiap gambar */
+.monthversary-image:nth-child(1) {
+    animation-delay: 0.3s; /* Delay untuk gambar pertama */
+}
+
+.monthversary-image:nth-child(2) {
+    animation-delay: 0.6s; /* Delay untuk gambar kedua */
+}
+
+.monthversary-image:nth-child(3) {
+    animation-delay: 0.9s; /* Delay untuk gambar ketiga */
+}
+
+.monthversary-image:nth-child(4) {
+    animation-delay: 1.2s; /* Delay untuk gambar keempat */
+}
+
+footer {
+    background-color: #ff0000; /* Merah */
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
